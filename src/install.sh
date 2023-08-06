@@ -18,6 +18,14 @@ else
 	echo "Starting installation..."
 fi
 
+if [ -f /usr/bin/gcc ]; then
+	echo "gcc exists"
+else
+	echo "gcc is required to compile code... but wasn't found".
+	echo "install and try again..."
+
+	exit 2
+fi
 # store files in a different directory for later use
 if [ -d "/src" ]; then
 	read -p "Directory '/src' exits... Do you want to continue? (y/n) " answer
@@ -29,7 +37,7 @@ if [ -d "/src" ]; then
 		exit 0
 	else
 		echo "No valid response given... Run the program and try again"
-		exit 2
+		exit 3
 	fi
 else
 	echo "Creating /src directory"
@@ -56,6 +64,10 @@ if [ -d "/home/$user/.vim" ]; then
 		cp -r "../resources/vim/" "/home/$user/.vim"
 		chown -R $user:$user /home/$user/.vim
 	fi
+else
+	# copy the vim folder to user's directory... contains all plugins
+	cp -r "../resources/vim/" "/home/$user/.vim"
+	chown -R $user:$user /home/$user/.vim
 fi
 
 echo ""
