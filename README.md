@@ -6,7 +6,7 @@ This program aims to help you quickly set and unset cool Vim features.
 
 These features include
 
-- A colorscheme of your choice... peachpuff by default
+- A colorscheme of your choice... hybrid_material by default
   - you can edit the `.vimrc` file in your directory if you prefer another
 - Better syntax highlighting
 - Better indentations
@@ -18,10 +18,10 @@ These features include
   - You can do all this while in VIM
 - use `:vsplit` to vertically split the VIM window and work on multiple files.
 - `:vsplit <filename>` opens the file specified in the new window.
-- user `Ctrl + W + <direction>` to change to different windows.
+- use `Ctrl + W + <direction>` to change to different windows.
   - you can also press `Ctrl + W` multiple times to cycle through all opened windows
 
-## How to install
+## How to install (Linux Environments)
 
 1. Clone this repository: **git clone <https://github.com/nanafox/more-vim.git>**
 2. Change directory into the folder. `cd more-vim`

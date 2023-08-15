@@ -139,8 +139,8 @@ if !has('nvim')
     set termwinsize=12x0    " Set terminal size
 endif
 
-set background=dark     " Set background 
-colorscheme peachpuff    " Set color scheme
+set background=dark     	   " Set background 
+colorscheme hybrid_material    " Set color scheme
 
 
 " ------------------------------------------------------------
