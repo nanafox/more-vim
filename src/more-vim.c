@@ -29,7 +29,7 @@ void show_usage(void);
 int main(int argc, char *argv[])
 {
 	char *username = getlogin(); /* fetch username */
-	char *vimrc_file;
+	char vimrc_file[30];
 	/* set the path to the user's .vimrc file */
 	sprintf(vimrc_file, "/home/%s/.vimrc", username);
 	if (argc != 2)
