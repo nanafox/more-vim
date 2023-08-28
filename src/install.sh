@@ -53,7 +53,7 @@ cp more-vim.c /src/
 # remove existing .vim folder
 if [ -d "/home/$user/.vim" ]; then
 	echo ""
-	echo "There's an existing .vim folder in your home directory..." 
+	echo "There's an existing /home/$user/.vim folder in your home directory..." 
 	read -p "do you want overwrite it? (y/n) " overwrite
 	if [ $overwrite = 'n' ]; then
 		echo "Exiting installation..."
@@ -75,6 +75,10 @@ echo "File copied successfully..."
 
 # compile code and put in /usr/bin directory
 gcc more-vim.c -o /usr/bin/more-vim
+
+# create .vimrc file
+touch /home/$user/.vimrc
+chown $user:$user /home/$user/.vimrc
 
 # everything is set now
 echo "more-vim is ready now..."
