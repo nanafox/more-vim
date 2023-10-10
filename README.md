@@ -11,6 +11,7 @@ These features include
 - Better syntax highlighting
 - Better indentations
   - Equivalent to four spaces by default
+- Remove trailing whitespaces with `:Trail` while in command mode
 - Easier navigation
 - Parenthesis matching
 - `Ctrl + J` for in-Vim terminal (splits below)
